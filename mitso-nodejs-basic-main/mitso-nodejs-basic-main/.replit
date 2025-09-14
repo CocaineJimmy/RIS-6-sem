@@ -1,0 +1,8 @@
+modules = ["nodejs-20"]
+run = "find src -name '*.js' -exec node {} +"
+
+[nix]
+channel = "stable-24_05"
+
+[deployment]
+run = ["sh", "-c", "find src -name '*.js' -exec node {} +"]
